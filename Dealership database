@@ -1,0 +1,22 @@
+CREATE TABLE cars (id integer primary key, brand text, model text, year integer, price integer);
+
+INSERT INTO cars VALUES(1, "BMW","M3", 2017, 50000);
+INSERT INTO cars Values(2, "Chevrolet", "Camaro", 2018, 42000);
+INSERT INTO cars values(3, "Ford", "Mustang", 2012, 24000);
+INSERT INTO cars values(4, "Toyota", "4-RUNNER", 2018, 40000);
+INSERT INTO cars values(5, "Mercedes-Benz", "GLS63", 2023, 120000);
+INSERT INTO cars values(6, "Lexus", "GSF", 2015, 100000);
+INSERT INTO cars values(7, "Jeep", "Grand Cherokee SRT", 2017, 55000);
+INSERT INTO cars values(8, "Porsche", "GT3RS", 2021, 260000);
+INSERT INTO cars values(9, "Cadillac", "CTS-V", 2019, 79000);
+INSERT INTO cars values(10, "Lamborghini", "Aventador SVJ", 2021, 1400000); 
+INSERT INTO cars values(11, "Dodge", "Challenger", 2016, 55000);
+INSERT INTO cars values(12, "Lincoln", "Continental", 2020, 138000);
+INSERT INTO cars values(13, "Audi", "R8", 2018, 280000);
+INSERT INTO cars values(14, "Crysler", "300 C", 2023, 83000);
+INSERT INTO cars values(15, "Delorean", "DMC-12", 1981, 99900);
+
+SELECT * FROM cars;
+SELECT * FROM cars GROUP BY price;
+SELECT MAX(price) as most_dollars_paid FROM cars;
+First I created a database for a dealership, then displayed the database by order of price.
