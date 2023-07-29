@@ -1,0 +1,29 @@
+CREATE TABLE cars (id integer primary key, year integer, company text, model text, top_speed integer, mpg integer, price integer);
+
+INSERT INTO cars VALUES (1, 2016, "BMW", "535i", 160, 16, 33000);
+INSERT INTO cars VALUES (2, 2018, "Chevrolet", "Camaro", 165, 12, 40000);
+INSERT INTO cars VALUES (3, 2012,"Ford", "Mustang", 173, 15, 24000);
+INSERT INTO cars VALUES (4, 2014, "BMW", "335i", 155, 15.5, 33000);
+INSERT INTO cars VALUES (5, 2007, "Jeep", "Grand Cherokee SRT", 152, 12, 17000);
+INSERT INTO cars VALUES (6, 2013, "BMW", "135i", 155, 20, 22000);
+INSERT INTO cars VALUES (7, 2008, "BMW", "335i", 175, 12, 14500);
+INSERT INTO cars VALUES (8, 2010, "BMW", "550i", 155, 19, 11000);
+INSERT INTO cars VALUES (9, 2015, "BMW", "435i", 155, 16, 28000);
+INSERT INTO cars VALUES (10, 2017, "Ford", "Mustang", 162, 12, 31000);
+INSERT INTO cars VALUES (11, 2015, "Honda", "Accord", 118, 28, 24500);
+INSERT INTO cars VALUES (12, 2022, "BMW", "X7", 155, 21, 92000);
+INSERT INTO cars VALUES (13, 2015, "Lexus", "GSF", 168, 21, 100000);
+INSERT INTO cars VALUES (14, 2003, "BMW", "525i", 100, 21, 4000); 
+INSERT INTO cars VALUES (15, 2014,"Jeep", "Grand Cherokee", 177, 20, 43000);
+INSERT INTO cars VALUES (16, 2016, "Dodge", "Challenger SRT 392", 182, 16, 47000);
+INSERT INTO cars VALUES (17, 2019, "Dodge", "Charger Hellcat", 204, 13, 65000);
+INSERT INTO cars VALUES (18, 2006, "Chevrolet", "Corvette", 190, 20, 27000);
+INSERT INTO cars VALUES (19, 2012, "GMC", "Savana 2500", 100, 17, 17500);
+INSERT INTO cars VALUES (20, 2008, "GMC", "Savana 3500", 100, 16, 7000);
+
+SELECT * FROM cars;
+SELECT year,company, model, price FROM cars WHERE price > 20000 ORDER BY price;
+
+SELECT year,company, model, mpg FROM cars GROUP BY year HAVING mpg > 14 AND year >= 2010;
+
+SELECT company, model, mpg FROM cars WHERE mpg >= ROUND(45-27) 
